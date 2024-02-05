@@ -85,3 +85,15 @@ def download():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+# [Unit]
+# Description=Gunicorn daemon to serve my flaskapp
+# After=network.target
+# [Service]
+# User=ubuntu
+# Group=www-data
+# WorkingDirectory=/home/ubuntu/Login_page
+# ExecStart=/home/ubuntu/Login_Page/venv/bin/gunicorn --bind unix:flaskapp.sock app:app
+# [Install]
+# WantedBy=multi-user.target
