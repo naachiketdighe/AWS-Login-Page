@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Page</title>
+</head>
+<body>
+    <h2>Registration Successful</h2>
+    <p>Information Accepted:</p>
+    <ul>
+        <li>Username: {{ user[1] }}</li>
+        <li>Password: {{ user[2] }}</li>
+        <li>First Name: {{ user[3] }}</li>
+        <li>Last Name: {{ user[4] }}</li>
+        <li>Email: {{ user[5] }}</li>
+    </ul>
+    <h2>Retrieve User Information</h2>
+    <form method="POST" action="/retrieve">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Retrieve Information">
+    </form>
+</body>
+</html>
